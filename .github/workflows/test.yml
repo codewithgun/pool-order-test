@@ -3,7 +3,7 @@ name: Pool Order
 on:
   pull_request:
     branches:
-      - main
+      - master
 
 jobs:
   pool_order_changed_files:
