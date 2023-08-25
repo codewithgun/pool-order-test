@@ -1,0 +1,19 @@
+{
+    "name": "pool-order-test",
+    "version": "1.0.0",
+    "description": "#### For testing purpose",
+    "main": "index.js",
+    "scripts": {
+        "test": "npx ts-mocha --type-check --bail -p ./tsconfig.json -t 1000000 tests/**/*.ts"
+    },
+    "author": "",
+    "license": "ISC",
+    "devDependencies": {
+        "@types/chai": "^4.3.5",
+        "@types/mocha": "^10.0.1",
+        "chai": "^4.3.8",
+        "mocha": "^10.2.0",
+        "ts-mocha": "^10.0.0",
+        "typescript": "^5.2.2"
+    }
+}
