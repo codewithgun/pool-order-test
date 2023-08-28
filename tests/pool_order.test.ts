@@ -17,4 +17,15 @@ describe("Valid pool order array", () => {
     expect(poolsOrdering, "Invalid JSON format").not.null;
     expect(Array.isArray(poolsOrdering), "Not an array").to.be.true;
   });
+
+  it("No duplicate pool address", () => {
+    const poolExistence = new Map();
+    for (const pool of poolOrder) {
+      expect(
+        poolExistence.get(pool),
+        `${pool} pool address already exists in the json. Please reorder it`
+      ).to.be.undefined;
+      poolExistence.set(pool, true);
+    }
+  });
 });
